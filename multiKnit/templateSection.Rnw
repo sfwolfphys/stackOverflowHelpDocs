@@ -1,0 +1,17 @@
+% !Rnw root = masterReport.Rnw
+\section{Year \Sexpr{y} results}
+Here is our ``data'' from year \Sexpr{y}.
+<<results='hide'>>=
+set.seed(y)
+yearData = rnorm(1000, mean = y)
+knitr::opts_chunk$set(fig.path = paste0('year',y,'/'))
+@
+Now let's make a plot:
+<<histogram>>=
+hist(yearData)
+@
+And let's view the summary:
+<<>>=
+summary(yearData)
+@
+

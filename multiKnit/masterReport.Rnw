@@ -1,0 +1,24 @@
+% !Rnw weave = knitr
+\documentclass{article}
+
+\title{Fantastic Yearly Report}
+\author{me}
+\date{\today}
+
+\begin{document}
+\section{Introduction}
+Blah blah, we have this cool longitudinal data we want to study, let's do it! 
+
+%% Script generates/knits all of the appropriate sections individually
+<<>>=
+source('generateSections.R')
+@
+
+%% Now drop them here:
+\input{year1}
+\input{year2}
+\input{year3}
+\input{year4}
+\input{year5}
+
+\end{document}
